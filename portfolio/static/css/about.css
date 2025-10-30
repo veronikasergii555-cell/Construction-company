@@ -1,0 +1,102 @@
+
+/* ТЕКСТ ПО СЕРЕДИНЕ СТРАНИЦ */
+.content {
+    position: relative; /* фиксирует меню в верхней части экрана */
+    color: white;
+    z-index: 1;
+    padding-top: 15vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+/* ТЕКСТ h1 */
+.content h1 {
+    font-size: 60px;
+}
+/* ТЕКСТ p */
+ .content p {
+    font-size: 22px;
+}
+
+/* КНОПКИ НА ГЛАВНОЙ СТРАНИЦЕ ЗАКАЗАТЬ ЗВОНОК И УСЛУГИ */
+.container-button {
+    display: flex; /* современный способ выстраивать элементы в ряд */
+    gap: 20px; /* задаёт расстояние между элементами внутри Flex-контейнера.*/
+    justify-content: center; /* по горизонтали */
+    align-items: center; /* по вертикали */
+}
+/* ОФОРМЛЕНИЕ ДЛЯ КНОПОК*/
+.btn {
+    padding: 20px 40px; /* 20px сверху и снизу 40px слева и справа Внутренние отступы контейнера */
+    font-size: 20px; /* Задаёт размер текста для содержимого контейнера. */
+    border-radius: 60px; /* скруглённые края */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Добавляет плавный переход для всех изменений (цвет, фон, тень и т.д.). */
+    border: 2px solid transparent; /* Добавляет рамку толщиной 2 пикселя */
+}
+/* КНОПКА 1*/
+.button1 {
+    width: 258px; /* ширина */
+    height: 70px; /* высота */
+    background-color: #c59d5f; /* цвет фона */
+    color: white; /* цвет текста */
+    border: 2px solid white; /* рамки */
+    z-index: 1; /* слой */
+}
+/* КНОПКА 2*/
+.button2 {
+    width: 258px; /* ширина */
+    height: 70px; /* высота */
+    background-color: transparent; /* цвет фона */
+    color: white; /* цвет текста */
+    border: 2px solid white; /* рамки */
+    z-index: 1; /* слой */
+}
+
+/* АНИМАЦИЯ КНОПКИ 1 */
+.button1:hover {
+    color: #505050;
+    background: #ebddc7;
+    transform: scale(1.1);
+}
+/* АНИМАЦИЯ КНОПКИ 2 */
+.button2:hover {
+    color: #505050;
+    background: #ebddc7;
+    transform: scale(1.1);
+}
+
+
+.white-box {
+    position: relative;
+    z-index: 1;
+    display: flex; /* выстраиваем “воображаемые столбцы” */
+    justify-content: space-around; /* равномерно распределяет элементы */
+    align-items: center; /* важно — центрирует все ссылки и кнопку */
+    background-color: rgba(255, 255, 255, 0.1); /* полупрозрачный фон */
+    backdrop-filter: blur(10px); /* эффект стекла */
+    border-radius: 10px; /* скруглённые углы */
+    padding: 40px 20px;
+    width: 40%;
+    margin: 60px auto; /* по центру страницы */
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Добавляет тень под меню, создавая эффект объёма. */
+}
+
+/* Каждый "столбец" */
+.stat {
+    text-align: center; /* выравнивание по центру */
+}
+
+/* Цифры */
+.stat h2 {
+    font-size: 42px;
+    margin: 0;
+    color: white; /* золотисто-бежевый оттенок */
+}
+
+/* Подписи */
+.stat p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: white; /* слегка прозрачный белый */
+}

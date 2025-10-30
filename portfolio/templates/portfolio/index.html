@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ru">
+{% load static %}
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Veronika Sergii">
+    <title>Строительная компания</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"><!-- подключение шрифта-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css'%}">
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+    <link rel="stylesheet" href="{% static 'css/services.css'%}">
+    <link rel="stylesheet" href="{% static 'css/project.css'%}">
+    <link rel="stylesheet" href="{% static 'css/team.css'%}">
+    <link rel="stylesheet" href="{% static 'css/contact.css'%}">
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}">
+
+</head>
+
+<body>
+
+    <section id="home-page">
+        <header id="main-header"><!--Меню-->
+        <div class="logo">ProStruct</div>
+
+        <nav>
+            <a class="about-us" href="#home-page">О нас</a>
+            <a href="#services-page">Услуги</a>
+            <a href="#project-page">Проекты</a>
+            <a href="#team-page">Команда</a>
+            <a href="#contacts">Контакты</a>
+            <button class="call">Заказать звонок</button>
+        </nav>
+
+        </header><!--Меню-->
+
+            <video autoplay muted loop id="background-video">
+                <source src="{% static 'media/background.mp4' %}" type="video/mp4">
+            </video> <!--Фон-видео-->
+            <div class="black-fon"></div> <!--Полупрозрачное наложение на видео-->
+
+            <div class="content">
+                <h1>Создание совершенства с<br>
+                    помощью профессиональных<br>
+                    строительных услуг</h1>
+                <p>Мы создаем микрорайон, в котором учтены все нюансы: удобная локация<br>
+                    с быстрым доступом ко всем основным объектам города, продуманная<br>
+                    социальная и коммерческая инфраструктура.</p>
+            </div><!--Главная страница-->
+            <div class="container-button">
+                <button class="btn button1">Услуги</button>
+                <button  class="btn button2">Смотреть проекты</button>
+            </div> <!--Главная страница-->
+            <div class="white-box">
+                <div class="stat">
+                    <h2>250</h2>
+                    <p>завершенные<br> проекты</p>
+                </div>
+
+                <div class="stat">
+                    <h2>15</h2>
+                    <p>лет опыта</p>
+                </div>
+
+                <div class="stat">
+                    <h2>98 %</h2>
+                    <p>довольных<br> заказчиков</p>
+                </div>
+
+                <div class="stat">
+                    <h2>50</h2>
+                    <p>членов<br> экспертной<br> группы</p>
+                </div>
+
+            </div> <!--Главная страница-->
+    </section>
+
+    <section id="services-page"> <!--Страница Услуги-->
+        <div class="text-senter">
+            <h3>Услуги</h3>
+            <p>Наша строительная компания объединяет многолетний опыт, надежных
+                поставщиков и команду профессионалов,<br> которые ценят ваше доверие.</p>
+        </div>
+
+        <div class="button-grid">
+            <div class="square">
+                <i>01</i>
+                <div class="image-box">
+                <img src="{% static 'images/01.png' %}" alt="Иконка"">
+                </div>
+                <h4>Коммерческое cтроительство</h4>
+                <p >Комплексные решения для <br>
+                    коммерческого строительства: от<br>
+                    офисных комплексов до торговых<br>
+                    площадей, реализуемые с точностью<br>
+                    и профессионализмом.</p>
+            </div>
+
+            <div class="square">
+                <i>02</i>
+                <div class="image-box">
+                <img src="{% static 'images/02.png' %}" alt="Иконка"">
+                </div>
+                <h4>Жилые проекты</h4>
+                <p > Индивидуальные услуги по<br>
+                    строительству и ремонту домов,<br>
+                    которые воплощают вашу идею в<br>
+                    реальность с вниманием к каждой<br>
+                    детали. </p>
+            </div>
+            <div class="square">
+
+                <i>03</i>
+                <div class="image-box">
+                <img src="{% static 'images/03.png' %}" alt="Иконка"">
+                </div>
+                <h4>Услуги проектирования</h4>
+                <p>Комплексный подход, объединяющий<br>
+                    архитектурное проектирование и<br>
+                    опыт строительства для<br>
+                    бесперебойной реализации проекта.</p>
+            </div>
+            <div class="square">
+                <i>04</i>
+                <div class="image-box">
+                <img src="{% static 'images/04.png' %}" alt="Иконка"">
+                </div>
+                <h4>Проектный консалтинг</h4>
+                <p >Экспертное руководство на каждом<br> этапе строительства со<br> стратегическим планированием и<br> профессиональным надзором.</p>
+            </div>
+            <div class="square">
+                <i>05</i>
+                <div class="image-box">
+                <img src="{% static 'images/05.png' %}" alt="Иконка"">
+                </div>
+                <h4>Реновация и реконструкция</h4>
+                <p >Преобразите существующие<br>
+                    пространства с помощью<br>
+                    современных обновлений, сохранив<br>
+                    при этом структурную целостность и<br>
+                    эстетическую привлекательность.</p>
+            </div>
+            <div class="square">
+                <i>06</i>
+                <div class="image-box">
+                <img src="{% static 'images/06.png' %}" alt="Иконка"">
+                </div>
+                <h4>Разработка проекта</h4>
+                <p >Полная подготовка площадки,<br>
+                    включая выемку грунта,<br>
+                    выравнивание и установку<br>
+                    коммуникаций для оптимального<br>
+                    фундамента проекта.</p>
+            </div>
+        </div>
+    </section> <!--Страница Услуги-->
+
+    <section id="project-page"> <!--Страница Проекты-->
+        <div class="text-senter-project">
+            <h3>Проекты</h3>
+            <p>Мы создаем современную и функциональную среду для жизни, работы и<br> развития бизнеса.</p>
+        </div>
+
+        <div class="button-grid-project">
+
+            <div class="square-project">
+                <div class="project-image">
+                    <img src="{% static 'images/001.jpg' %}" alt="Иконка"">
+                </div>
+
+                <i>Частный</i>
+                <h4>Загородный дом</h4>
+                <p>Энергоэффективный коттедж для<br> круглогодичного проживания, построенный<br> из экологичных материалов.</p>
+                <div class="image-box-project">
+                    <img src="{% static 'images/метка.png' %}" alt="Иконка">
+                    <g>Краснодар</g>
+                    <img src="{% static 'images/календарь.png' %}" alt="Иконка">
+                    <g>18 месяцев</g>
+                </div>
+            </div>
+
+            <div class="square-project">
+                <div class="project-image">
+                    <img src="{% static 'images/002.jpg' %}" alt="Иконка"">
+                </div>
+
+                <i>Коммерческий</i>
+                <h4>Деловой центр </h4>
+                <p>Современный офисный комплекс с<br> элементами устойчивого дизайна и<br> передовыми строительными системами.</p>
+                <div class="image-box-project">
+                    <img src="{% static 'images/метка.png' %}" alt="Иконка">
+                    <g>Москва</g>
+                    <img src="{% static 'images/календарь.png' %}" alt="Иконка">
+                    <g>25 месяцев</g>
+                </div>
+            </div>
+
+             <div class="square-project">
+                <div class="project-image">
+                    <img src="{% static 'images/003.jpg' %}" alt="Иконка"">
+                </div>
+                <i>Складской</i>
+                <h4>Логистический комплекс</h4>
+                <p>Современный складской терминал с<br> высотными потолками, многоуровневой<br> системой рамп.</p>
+                <div class="image-box-project">
+                    <img src="{% static 'images/метка.png' %}" alt="Иконка">
+                    <g>Пермь</g>
+                    <img src="{% static 'images/календарь.png' %}" alt="Иконка">
+                    <g>10 месяцев</g>
+                </div>
+            </div>
+
+            <div class="square-project">
+                <div class="project-image">
+                    <img src="{% static 'images/004.png' %}" alt="Иконка"">
+                </div>
+                <i>Общественный</i>
+                <h4>Спортивное сооружение</h4>
+                <p>Современный спортивный комплекс с<br> бассейном, универсальным залом и зонами<br> для групповых занятий</p>
+                <div class="image-box-project">
+                    <img src="{% static 'images/метка.png' %}" alt="Иконка">
+                    <g>Анапа</g>
+                    <img src="{% static 'images/календарь.png' %}" alt="Иконка">
+                    <g>16 месяцев</g>
+                </div>
+            </div>
+
+            <div class="square-project">
+                <div class="project-image">
+                    <img src="{% static 'images/005.jpg' %}" alt="Иконка"">
+                </div>
+                <i>Промышленный</i>
+                <h4>Технопарк</h4>
+                <p>Современный промышленный комплекс с<br> модульными цехами, офисными блоками и<br> развитой инженерной инфраструктурой</p>
+                <div class="image-box-project">
+                    <img src="{% static 'images/метка.png' %}" alt="Иконка">
+                    <g>Ставрополь</g>
+                    <img src="{% static 'images/календарь.png' %}" alt="Иконка">
+                    <g>10 месяцев</g>
+                </div>
+            </div>
+
+
+            <div class="square-project">
+                <div class="project-image">
+                    <img src="{% static 'images/006.jpg' %}" alt="Иконка"">
+                </div>
+                <i>Жилой комплекс</i>
+                <h4>Жилой комплекс</h4>
+                <p>Современный жилой комплекс с<br> продуманными планировками квартир,<br> подземным паркингом </p>
+                <div class="image-box-project">
+                    <img src="{% static 'images/метка.png' %}" alt="Иконка">
+                    <g>Москва</g>
+                    <img src="{% static 'images/календарь.png' %}" alt="Иконка">
+                    <g>26 месяцев</g>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section><!--Страница Проекты-->
+
+    <section id="team-page"> <!--Страница Команда-->
+
+         <div class="text-senter-team">
+            <h3>Команда</h3>
+            <p> За каждым успешным проектом стоит команда профессионалов,<br> которые гордятся своей работой. </p>
+        </div>
+
+        <div class="button-grid-team">
+
+            <div class="square-team">
+                <div class="team-image">
+                    <img src="{% static 'images/101.jpg' %}" alt="Иконка"">
+                </div>
+
+                <h4>Маркус Томпсон</h4>
+                <i>Руководитель проекта</i>
+                <p>Отвечает за реализацию проекта от<br> идеи до сдачи ключей. Координирует<br> работу всех отделов, контролирует<br> бюджет и сроки. </p>
+
+            </div>
+
+            <div class="square-team">
+                <div class="team-image">
+                    <img src="{% static 'images/102.jpg' %}" alt="Иконка"">
+                </div>
+
+                <h4>Микаэла Торрес</h4>
+                <i>Ведущий мастер</i>
+                <p>Возглавляет бригады мастеров и<br> отвечает за выполнение строительно-<br>монтажных работ в строгом<br> соответствии с проектом.</p>
+
+            </div>
+
+            <div class="square-team">
+                <div class="team-image">
+                    <img src="{% static 'images/103.jpg' %}" alt="Иконка"">
+                </div>
+
+                <h4>Дэвид Чен</h4>
+                <i>Координатор по безопасности</i>
+                <p>Обеспечивает полное соблюдение<br> норм охраны труда и промышленной<br> безопасности на объекте.</p>
+
+            </div>
+
+
+            <div class="square-team">
+                <div class="team-image">
+                    <img src="{% static 'images/104.jpg' %}" alt="Иконка"">
+                </div>
+
+                <h4>Бен Родригес</h4>
+                <i>Руководитель участка</i>
+                <p>Организует и контролирует<br> производство работ на вверенном<br> ему участке.</p>
+
+            </div>
+
+            <div class="square-team">
+                <div class="team-image">
+                    <img src="{% static 'images/105.jpg' %}" alt="Иконка"">
+                </div>
+
+                <h4>Антон Уолш</h4>
+                <i>Инспектор по контролю </i>
+                <p>Осуществляет поэтапный контроль<br> всех видов работ — от нулевого цикла<br> до чистовой отделки.</p>
+
+            </div>
+
+            <div class="square-team">
+                <div class="team-image">
+                    <img src="{% static 'images/106.jpg' %}" alt="Иконка"">
+                </div>
+
+                <h4>Арнольд Фостер</h4>
+                <i>Архитектор </i>
+                <p>Превращает ваши пожелания в<br> детализированные проекты, которые<br> удобно реализовывать.</p>
+
+            </div>
+
+    </section><!--Страница Команда-->
+
+    <section id="contacts"> <!--Страница Контакты-->
+        <div class="text-senter-contacts">
+            <h3>Контакты</h3>
+            <p> Свяжитесь с нами — и мы найдем лучшее решение для вашей задачи! </p>
+        </div>
+
+
+
+      <div class="contacts-container">
+        <!-- Левая часть — карта -->
+        <div class="contacts-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18..."
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Правая часть — информация и форма -->
+        <div class="contacts-right">
+          <!-- 4 маленьких блока -->
+          <div class="contacts-info">
+            <div class="info-box"> Адрес<br><span>г. Краснодар, ул. Примерная, 10</span></div>
+            <div class="info-box"> Телефон<br><span>+7 (999) 123-45-67</span></div>
+            <div class="info-box">️ Почта<br><span>info@company.ru</span></div>
+            <div class="info-box"> Время<br><span>Пн–Пт: 9:00–18:00</span></div>
+          </div>
+
+          <!-- Форма -->
+          <div class="form-box">
+            <h3>Связаться с нами</h3>
+            <form class="contacts-form">
+              <input type="text" placeholder="Введите имя" required>
+              <input type="tel" placeholder="Введите ваш номер телефона" required>
+              <input type="text" placeholder="Тема вопроса" required>
+              <textarea placeholder="Комментарий" required></textarea>
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</section><!--Страница Контакты-->
+
+    <section id="footer-page">
+         <footer class="main-footer">
+            <div class="footer-container">
+              <div class="footer-left">
+                <h3>ProStruct</h3>
+                <p>Профессиональные строительные решения<br> для вашего комфорта и бизнеса.</p>
+              </div>
+
+              <div class="footer-center">
+                <h4>Навигация</h4>
+                <ul>
+                  <li><a href="#home-page">О нас</a></li>
+                  <li><a href="#services-page">Услуги</a></li>
+                  <li><a href="#project-page">Проекты</a></li>
+                  <li><a href="#team-page">Команда</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-right">
+                <h4>Контакты</h4>
+                <p>г. Краснодар, ул. Примерная, 10<br>
+                   +7 (999) 123-45-67<br>
+                   info@company.ru</p>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <p>© 2025 ProStruct. Все права защищены.</p>
+            </div>
+        </footer>
+    </section><!--Страница Футер-->
+
+    <section id="model window"> <!--Окно заказать звонок-->
+        <div id="modal-overlay" class="modal-overlay">
+          <div class="modal-window">
+            <h2>Получите индивидуальное предложение</h2>
+            <p>Поделитесь подробностями вашего проекта и получите комплексную смету, составленную с учетом ваших конкретных потребностей.</p>
+
+            <form class="modal-form">
+              <input type="text" placeholder="Введите ваше имя" required>
+              <input type="tel" placeholder="Введите ваш номер" required>
+              <input type="text" placeholder="Тема вопроса" required>
+              <textarea placeholder="Комментарии" required></textarea>
+              <button type="submit">Отправить</button>
+            </form>
+
+            <span class="modal-close">&times;</span>
+          </div>
+        </div>
+    </section><!--Окно заказать звонок-->
+
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

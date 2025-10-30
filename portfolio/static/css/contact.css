@@ -1,0 +1,202 @@
+/*текс внутри большого блока об услуге */
+.text-senter-contacts {
+    color: black;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.text-senter-contacts h3 {
+    font-size: 40px;
+    font-weight: normal; /* текст не жирный */
+    position: relative; /* нужно для ::after */
+    display: inline-block; /* чтобы линия была по ширине текста */
+    padding-bottom: 5px; /* отступ между текстом и линией */
+    margin-bottom: 3px; /* отступы внизу  */
+    margin-top: 10px;
+}
+/* создаем линию под заголовком */
+.text-senter-contacts h3::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 200%;               /* длина всей линии */
+      height: 2px;               /* толщина линии */
+      background-color: #c59d5f;    /* основной цвет линии */
+      transform: translateX(-50%);
+      transition: background-position 0.4s ease;
+      background-size: 200% 100%;
+      background-position: left center;
+      z-index: 1;
+}
+
+/* при наведении */
+.text-senter-contacts h3:hover::after {
+      width: 50%;               /* часть линии меняет размер или цвет */
+      background-color: #c59d5f; /* новый цвет */
+}
+
+.text-senter-contacts p {
+    font-size: 20px;
+    font-weight: normal; /* текст не жирный */
+    margin-bottom: 40px; /* отступы внизу  */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Общий блок */
+#contacts {
+  background: #f8f7f5;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  width: 1200px;
+  margin: 150px auto;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Контейнер */
+.contacts-container {
+  display: flex;
+  gap: 40px;
+}
+
+/* Левая часть — карта */
+.contacts-map {
+  flex: 2;
+  height: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Правая часть */
+.contacts-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Блоки с контактной информацией */
+.contacts-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-box {
+  background: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 15px;
+  height: 64px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.info-box span {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Квадрат формы */
+.form-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  height: auto; /* Можно задать height: 300px, если хочешь фиксированный размер */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-box h3 {
+  font-size: 22px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 15px;
+  position: relative;
+  text-align: center;
+}
+
+/* Тонкая золотая линия под заголовком */
+.form-box h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #c59d5f;
+  margin: 5px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Поля формы */
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contacts-form textarea {
+  min-height: 80px;
+}
+
+/* Кнопка */
+.contacts-form button {
+  background-color: #c59d5f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contacts-form button:hover {
+  background-color: #a77f46;
+  transform: translateY(-2px);
+}

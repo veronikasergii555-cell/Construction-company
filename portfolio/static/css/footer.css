@@ -1,0 +1,67 @@
+/* === ФУТЕР === */
+#footer-page {
+  background: rgba(255, 255, 255, 0.05); /* лёгкий стеклянный эффект */
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 60px 0 20px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.main-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 30px;
+}
+
+.footer-container h3,
+.footer-container h4 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin: 8px 0;
+}
+
+.footer-center ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center ul li a:hover {
+  color: white;
+}
+
+.footer-right p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}

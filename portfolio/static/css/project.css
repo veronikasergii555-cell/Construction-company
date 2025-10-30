@@ -1,0 +1,151 @@
+/*огромный белый блок*/
+#project-page {
+    background: #f8f7f5;
+    z-index: 1;
+    padding: 5px 30px; /*внутренние отступы */
+    border-radius: 20px; /* сглаживание углов */
+    width: 1200px;
+    height: 1030px;
+    margin: 175px auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Добавляет тень под меню, создавая эффект объёма. */
+}
+
+/*текс внутри большого блока об услуге */
+.text-senter-project {
+    color: black;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.text-senter-project h3 {
+    font-size: 40px;
+    font-weight: normal; /* текст не жирный */
+    position: relative; /* нужно для ::after */
+    display: inline-block; /* чтобы линия была по ширине текста */
+    padding-bottom: 5px; /* отступ между текстом и линией */
+    margin-bottom: 3px; /* отступы внизу  */
+}
+/* создаем линию под заголовком */
+.text-senter-project h3::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 200%;               /* длина всей линии */
+      height: 2px;               /* толщина линии */
+      background-color: #c59d5f;    /* основной цвет линии */
+      transform: translateX(-50%);
+      transition: background-position 0.4s ease;
+      background-size: 200% 100%;
+      background-position: left center;
+      z-index: 1;
+}
+
+/* при наведении */
+.text-senter-project h3:hover::after {
+      width: 50%;               /* часть линии меняет размер или цвет */
+      background-color: #c59d5f; /* новый цвет */
+}
+
+.text-senter-project p {
+    font-size: 20px;
+    font-weight: normal; /* текст не жирный */
+    margin-bottom: 40px; /* отступы внизу  */
+
+}
+
+/* структура таблицы */
+.button-grid-project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 столбца */
+    grid-gap: 40px; /* расстояние между квадратами */
+    justify-items: center;
+}
+
+/* Каждый квадрат — как кнопка */
+.square-project {
+      background-color: #ffffff;
+      color: black;
+      border-radius: 20px;
+      width: 350px;
+      height: 380px; /* немного выше, чтобы влезло всё */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; ;
+      padding: 0; /* убираем отступ сверху, чтобы картинка заполнила верх */
+      overflow: hidden; /* чтобы края картинки не вылезали */
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+/* 🖼 Блок для картинки */
+.project-image {
+      width: 100%;
+      height: 50%; /* 👈 половина карточки */
+      overflow: hidden;
+}
+
+.project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* масштаб без искажений */
+      display: block;
+}
+
+/* Остальные элементы карточки */
+.square-project i,
+.square-project h4,
+.square-project p,
+.image-box-project {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.square-project i {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #c59d5f;
+  margin-top: 10px;
+}
+
+.square-project h4 {
+  margin-top: 5px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.square-project p {
+      font-size: 15px;
+      margin-top: 5px;
+      color: #747474;
+      margin-bottom: 5px;
+}
+
+.image-box-project {
+      width: 350px; /* выравниваем по внутренним отступам */
+      height: 40px;
+      background-color: #ecddc7;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5px 5px 20px 20px;
+      margin-top: auto; /* 👈 прижимает блок к низу */
+      margin-bottom: 0;
+
+
+}
+
+.image-box-project img {
+      width: 23px;
+      height: 40px;
+      object-fit: contain;
+}
+
+.image-box-project g {
+       margin-right: 40px;
+}

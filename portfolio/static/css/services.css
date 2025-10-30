@@ -1,0 +1,141 @@
+
+/* УСЛУГИ */
+
+/*огромный белый юлок*/
+#services-page {
+    background: #f8f7f5;
+    z-index: 1;
+    padding: 5px 30px; /*внутренние отступы */
+    border-radius: 20px; /* сглаживание углов */
+    width: 1200px;
+    height: 870px;
+    margin: 175px auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Добавляет тень под меню, создавая эффект объёма. */
+
+}
+/*текс внутри большого блока об услуге */
+.text-senter {
+    color: black;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.text-senter h3 {
+    font-size: 40px;
+    font-weight: normal; /* текст не жирный */
+    position: relative; /* нужно для ::after */
+    display: inline-block; /* чтобы линия была по ширине текста */
+    padding-bottom: 5px; /* отступ между текстом и линией */
+
+    margin-bottom: 3px; /* отступы внизу  */
+}
+/* создаем линию под заголовком */
+.text-senter h3::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 200%;               /* длина всей линии */
+      height: 2px;               /* толщина линии */
+      background-color: #c59d5f;    /* основной цвет линии */
+      transform: translateX(-50%);
+      transition: background-position 0.4s ease;
+      background-size: 200% 100%;
+      background-position: left center;
+      z-index: 1;
+}
+/* при наведении */
+.text-senter h3:hover::after {
+      width: 50%;               /* часть линии меняет размер или цвет */
+      background-color: #c59d5f; /* новый цвет */
+}
+
+.text-senter p {
+    font-size: 20px;
+    font-weight: normal; /* текст не жирный */
+    margin-bottom: 40px; /* отступы внизу  */
+
+}
+
+/* структура таблицы */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 столбца */
+    grid-gap: 40px; /* расстояние между квадратами */
+    justify-items: center;
+}
+
+/* Каждый квадрат — как кнопка */
+.square {
+      background-color: #ffffff;
+      color: black;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 200;
+      border-radius: 5px;/* скругление углов кнопок */
+      width: 350px; /* ширина кнопок */
+      height: 300px;
+      transition: all 0.3s ease;
+      border: 1px solid #e2e2e2; /* рамка кнопок*/
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+      /* 🔹 главное изменение — теперь используем grid, а не flex */
+      display: grid;
+      grid-template-rows: auto 60px auto 1fr; /* одинаковые "ряды" для каждого элемента */
+      justify-items: start; /* выравниваем элементы по левому краю */
+      align-items: start;   /* прижимаем элементы к верху своих ячеек */
+
+      padding: 30px 25px;
+
+}
+
+
+
+.image-box {
+      width: 45px;
+      height: 40px;
+      background-color: #ecddc7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 1px solid #c59d5f;
+}
+
+.image-box img {
+      width: 23px;
+      height: 40px;
+      object-fit: contain;
+}
+
+.square h4 {
+      font-size: 22px;
+      color: black;
+      font-weight: normal;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      text-align: left; /* 👈 добавь это */
+}
+
+.square p {
+      font-size: 15px;
+      color: black;
+      margin-top: 10px;
+      text-align: left; /* 👈 и это */
+}
+
+.square i {
+  font-size: 18px;
+  color: #c59d5f;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+

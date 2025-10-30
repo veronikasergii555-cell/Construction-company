@@ -1,0 +1,179 @@
+/* ВЕРХНЕЕ МЕНЮ*/
+#main-header{
+    position: fixed; /* фиксирует меню в верхней части экрана */
+    top: 5px; /* вверх */
+    left: 50px; /* слева */
+    right: 50px; /* справа */
+    height: 70px;
+    display: flex; /* современный способ выстраивать элементы в ряд */
+    justify-content: space-between; /* Расставляет элементы меню по краям контейнера */
+    background-color: rgba(217, 217, 217, 0.4); /* цвет фона */
+    color: white; /* цвет текста */
+    align-items: center; /* Выравнивает элементы по вертикали (по центру строки меню).*/
+    padding: 20px 40px; /* Внутренние отступы: 10px — сверху и снизу 40px — слева и справа Создаёт "воздух" вокруг текста и ссылок.*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Добавляет тень под меню, создавая эффект объёма. */
+    z-index: 2; /* Определяет уровень наложения. Большое значение гарантирует, что меню будет поверх других элементов*/
+    overflow: hidden;
+}
+
+#main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(217, 217, 217, 0.4); /* тот же фон, что у меню */
+  backdrop-filter: blur(10px); /* придаёт эффект размытия, если хочешь */
+  z-index: -1;
+}
+
+
+/* ЛОГОТИП */
+.logo {
+    color: white; /* Цвет текста*/
+    font-size: 25px; /* Размер текста*/
+    font-family: 'Inter', sans-serif; /* Шрифт текста*/
+    display: flex; /* современный способ выстраивать элементы в ряд */
+    margin: 0 10px; /* убирает внешние отступы элемента */
+}
+
+/* СТИЛЬ ДЛЯ МЕНЮ */
+nav {
+    display: flex; /* современный способ выстраивать элементы в ряд */
+    align-items: center; /* важно — центрирует все ссылки и кнопку */
+    gap: 20px; /* задаёт расстояние между элементами внутри Flex-контейнера.*/
+}
+
+/* 5 РЗДЕЛОВ МЕНЮ */
+nav a {
+    color: white; /* Цвет текста*/
+    font-size: 18px; /* Размер текста*/
+    font-family: 'Inter', sans-serif; /* Шрифт текста*/
+    font-weight: none; /* жирный текст */
+    margin: 0 10px; /* убирает внешние отступы элемента */
+    text-decoration: none; /* убирает подчеркивание */
+}
+/* ЦВЕТ КНОПКИ "О НАС" */
+nav a.about-us {
+    color: white; /* Цвет текста*/
+    font-size: 18px; /* Размер текста*/
+}
+/* КНОПКА В МЕНЮ "ЗАКАЗАТЬ ЗВОНОК" */
+.call {
+    display: flex; /* современный способ выстраивать элементы в ряд */
+    padding: 10px 20px; /* 20px сверху и снизу 40px слева и справа Внутренние отступы контейнера */
+    font-size: 15px; /* Задаёт размер текста для содержимого контейнера. */
+    border-radius: 50px; /* скруглённые края */
+    cursor: pointer; /* Меняет курсор при наведении на элемент */
+    transition: all 0.3s ease; /* Добавляет плавный переход для всех изменений (цвет, фон, тень и т.д.). */
+    border: none; /* Добавляет рамку толщиной 2 пикселя */
+    background-color: #c59d5f; /* Цвет фона кнопки*/
+    color: white;  /* Цвет текста*/
+}
+
+/* 5 РАЗДЕЛА МЕНЮ ЦВЕТ ПРИ НАВЕДЕНИИ */
+nav a:hover {
+    color: #ebddc7;
+}
+/* кнопка МЕНЮ ЦВЕТ ПРИ НАВЕДЕНИИ о нас */
+nav a.about-us:hover{
+    color: #ebddc7;
+}
+/* кнопка МЕНЮ ЦВЕТ ПРИ НАВЕДЕНИИ */
+.call:hover {
+    color: #141414;
+    background: #ebddc7;
+    transform: scale(1.1); /*при наведении курсора на кнопку она увеличивается */
+}
+
+
+/* ===== МОДАЛЬНОЕ ОКНО ===== */
+.modal-overlay {
+  display: none; /* скрыто по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* затемнение фона */
+  z-index: 999; /* поверх всего */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-window {
+  background: #fff;
+  color: #222;
+  width: 500px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-window h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.modal-window p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form input,
+.modal-form textarea {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+.modal-form button {
+  background: #c59d5f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-form button:hover {
+  background: #ebddc7;
+  color: #141414;
+}
+
+/* КНОПКА ЗАКРЫТИЯ */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
